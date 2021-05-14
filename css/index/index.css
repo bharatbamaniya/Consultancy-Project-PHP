@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap");
+
+@import url(navbar.css);
+@import url(landing-header.css);
+@import url(footer.css);
+@import url(sections.css);
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Ubuntu", sans-serif;
+}
+:root {
+  --bg-theme-clr: black;
+  --light-gray: rgb(58, 58, 58);
+  --primary: #ff0157;
+}

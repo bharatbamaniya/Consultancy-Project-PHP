@@ -1,0 +1,29 @@
+.landing_header {
+  padding: 1rem;
+}
+
+.split {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  /* width: 50%; */
+}
+.header-text {
+  padding: 2rem;
+  max-width: 500px;
+}
+.header-text h1 {
+  font-size: 50px;
+}
+.header-image {
+  padding: 2rem;
+  max-width: 500px;
+}
+.header-image img {
+  max-width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  /* .split {
+  } */
+}

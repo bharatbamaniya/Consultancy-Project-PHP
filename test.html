@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            padding: 0;margin: 0;
+        }
+        img{
+            width: 100%;
+            height: 100vh;
+        }
+        .parent {
+            position: relative;
+        }
+        .intro {
+            position: absolute;
+            /* text-align: center; */
+            left: 50%;
+top: 50%;
+transform: translate(-50%, -50%);
+           
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="parent">
+        <img src="img/header-image.svg" alt="image">
+        <div class="intro">
+            <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, facere exercitationem. Enim, voluptas. Sit corporis eaque fugiat possimus, quisquam eligendi nesciunt, ab odio rem earum eos a quasi voluptate consequuntur.</P>
+        </div>
+    </div> -->
+    <script>
+        // var current = new Date();
+        // var bd = new Date();
+        // bd.setDate(1);
+        // bd.setMonth(9);
+        // bd.setFullYear(1999);
+
+        // var c = current.getMonth() - bd.getMonth();
+        // var d = current.getMonth
+
+        function validateform(){
+            var textbox = document.myform.abc;
+            if(textbox.value == null || textbox.value == "")
+            {
+                alert("Name can't be blank");
+                document.getElementById("msg").innerHTML = "*Enter Your Name";
+                textbox.focus();
+                textbox.style.background = "yellow";
+                return false;
+            }
+        }
+        function validinput()
+        {
+            var textbox = document.myform.abc;
+            var msg = document.getElementById("msg");
+            var str1 = /^[_,@,0-9]/;
+            if(str1.test(textbox.value))
+            {
+                msg.innerHTML = "Name can not start with _ , @ , Numbers"
+            }
+            else
+            {   
+                // msg.innerHTML = textbox.value;
+                if(textbox.value == null || textbox.value == "")
+                {
+                    msg.innerHTML = "*Enter Your Name";
+                }
+                else
+                {
+                    msg.innerHTML = "";
+                }
+            }
+        }
+    </script>
+
+</body>
+    <form method="post" name="myform" onsubmit="return validateform()">
+        <br>
+        <br>
+        
+        <input type="text" name="abc"  oninput="validinput()">
+        <small id="msg" on></small>
+        <br>
+        <input type="submit" value="Submit">
+        
+    </form>
+</html>

@@ -1,0 +1,27 @@
+.login-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 500px;
+}
+input {
+  margin: 1rem;
+  padding: 0.3rem;
+  border-radius: 10px;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-style: solid;
+}
+table small {
+  color: red;
+}
+input:focus {
+  outline: none;
+}
+input[type="submit"] {
+  cursor: pointer;
+  width: 100px;
+}
+h1::first-letter {
+  color: red;
+}

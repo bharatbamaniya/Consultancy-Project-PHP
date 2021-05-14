@@ -1,0 +1,137 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background: var(--bg-theme-clr);
+  color: white;
+}
+.brand {
+  display: flex;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.brand h2 {
+  color: #fff;
+}
+span {
+  color: var(--primary);
+}
+nav .nav-items {
+  display: flex;
+}
+nav ul {
+  display: flex;
+  align-items: stretch;
+  list-style-type: none;
+}
+nav ul li {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  position: relative;
+  /* background: yellow; */
+  transition: 0.2s ease-in-out;
+  z-index: 2;
+}
+nav ul li a.login-btn {
+  color: var(--primary);
+}
+nav ul li::after {
+  content: ".";
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  /* left: 50%; */
+  left: 0;
+  right: 0;
+  top: 50%;
+  bottom: 50%;
+  /* padding: 0 2rem; */
+  color: transparent;
+  background: rgba(221, 221, 221, 0.308);
+  transition: 0.2s ease-in-out;
+}
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+nav ul li:hover:after {
+  /* top: 100%; */
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background: white;
+}
+nav ul li:hover a {
+  color: black;
+}
+
+nav .menu-btn {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  filter: invert(1);
+  cursor: pointer;
+}
+nav .menu-btn img {
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between;
+    align-items: center;
+  }
+  nav .menu-btn {
+    display: flex;
+    width: 40px;
+    height: 40px;
+  }
+  nav .menu-btn img {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+  }
+  nav .nav-items.active {
+    display: flex;
+  }
+  nav .nav-items {
+    display: none;
+    height: 100vh;
+    position: absolute;
+    top: 61px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: black;
+    transition: 0.3s ease-in-out;
+  }
+  nav .nav-items ul {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+  nav ul li {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    font-size: 1.4rem;
+  }
+
+  .brand {
+    display: block;
+  }
+}
+
+@media (max-width) {
+}
